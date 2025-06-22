@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Turbo Tech - Blog</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fff;
+      color: #202124;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8eaed;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(60,64,67,.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #1a73e8;
+      user-select: none;
+      cursor: default;
+    }
+
+    nav a {
+      color: #5f6368;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 24px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1a73e8;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    main h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin-bottom: 32px;
+      color: #202124;
+    }
+
+    .blog-post {
+      margin-bottom: 48px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgb(60 64 67 / 0.15);
+      background: #fff;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .blog-post:hover {
+      box-shadow: 0 4px 15px rgb(26 115 232 / 0.3);
+    }
+
+    .blog-image-container {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      border-bottom: 1px solid #e8eaed;
+    }
+
+    .blog-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-post:hover .blog-image-container img {
+      transform: scale(1.05);
+    }
+
+    .blog-title-overlay {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      color: white;
+      background: rgba(26, 115, 232, 0.8);
+      padding: 8px 16px;
+      font-weight: 500;
+      font-size: 1.25rem;
+      border-radius: 4px;
+      max-width: 90%;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      user-select: none;
+    }
+
+    .blog-content {
+      padding: 16px 24px 24px 24px;
+      font-size: 1rem;
+      color: #5f6368;
+    }
+
+    footer {
+      background: #f8f9fa;
+      border-top: 1px solid #e8eaed;
+      text-align: center;
+      padding: 16px 32px;
+      font-size: 0.875rem;
+      color: #5f6368;
+      box-shadow: inset 0 1px 0 #dadce0;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 32px 16px;
+        padding: 0 8px;
+      }
+      .blog-title-overlay {
+        font-size: 1rem;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Turbo Tech</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blog</a>
+      <a href="#">Pricing</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Latest Blog Posts</h1>
+
+    <article class="blog-post">
+      <div class="blog-image-container">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="Tech Repair Tools" />
+        <div class="blog-title-overlay">Top 5 Computer Repair Tips</div>
+      </div>
+      <div class="blog-content">
+        <p>Discover essential tips to keep your computer running smoothly and how to troubleshoot common issues quickly and effectively.</p>
+      </div>
+    </article>
+
+    <article class="blog-post">
+      <div class="blog-image-container">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="Laptop Selling" />
+        <div class="blog-title-overlay">How to Sell Your Old Laptop</div>
+      </div>
+      <div class="blog-content">
+        <p>Learn the best strategies to get the highest value for your used laptop while ensuring a safe and smooth transaction.</p>
+      </div>
+    </article>
+
+    <article class="blog-post">
+      <div class="blog-image-container">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="Data Transfer" />
+        <div class="blog-title-overlay">Safe Data Transfer Methods</div>
+      </div>
+      <div class="blog-content">
+        <p>Secure your important files with our guide on the safest and most efficient ways to transfer data between devices.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2025 Turbo Tech. All rights reserved.
+  </footer>
+</body>
+</html>
