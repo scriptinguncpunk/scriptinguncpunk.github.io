@@ -3,58 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Simple Blog</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Modern Google-like UI Website</title>
+  <style>
+    /* Google-like font */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #202124;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8eaed;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(60,64,67,.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #1a73e8;
+      user-select: none;
+      cursor: default;
+    }
+
+    nav a {
+      color: #5f6368;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 24px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1a73e8;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 720px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    main h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+      color: #202124;
+    }
+
+    main p {
+      font-size: 1.125rem;
+      color: #5f6368;
+      margin-bottom: 32px;
+    }
+
+    .btn-primary {
+      background-color: #1a73e8;
+      color: white;
+      padding: 12px 24px;
+      font-weight: 500;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgb(26 115 232 / 0.6);
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background-color: #155ab6;
+    }
+
+    footer {
+      background: #f8f9fa;
+      border-top: 1px solid #e8eaed;
+      text-align: center;
+      padding: 16px 32px;
+      font-size: 0.875rem;
+      color: #5f6368;
+      box-shadow: inset 0 1px 0 #dadce0;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 8px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 16px;
+      }
+
+      main {
+        margin: 32px 16px;
+        padding: 0 8px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>My Simple Blog</h1>
+    <div class="logo">MySite</div>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="tos.html">Terms of Service</a> |
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="new-post">
-      <h2>Write a new blog post</h2>
-      <textarea id="post-text" placeholder="Start writing your post here..." rows="10" cols="80"></textarea>
-      <br />
-      <button onclick="savePost()">Save Post</button>
-    </section>
-
-    <section id="posts">
-      <h2>Blog Posts</h2>
-      <div id="posts-container">
-        <!-- Blog posts will appear here -->
-      </div>
-    </section>
+    <h1>Welcome to MySite</h1>
+    <p>
+      Experience a clean, modern, and intuitive website design inspired by Google's
+      UI principles — simplicity, clarity, and usability.
+    </p>
+    <a href="#" class="btn-primary">Get Started</a>
   </main>
 
   <footer>
-    <p>© 2025 My Simple Blog. All rights reserved.</p>
+    &copy; 2025 MySite. All rights reserved.
   </footer>
-
-  <script>
-    function savePost() {
-      const textArea = document.getElementById('post-text');
-      const content = textArea.value.trim();
-      if (!content) {
-        alert('Please write something before saving!');
-        return;
-      }
-
-      const postsContainer = document.getElementById('posts-container');
-
-      const postDiv = document.createElement('div');
-      postDiv.className = 'post';
-      postDiv.textContent = content;
-
-      postsContainer.prepend(postDiv);
-
-      textArea.value = '';
-    }
-  </script>
 </body>
 </html>
