@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Turbo Tech - Pricing</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fff;
+      color: #202124;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8eaed;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(60,64,67,.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #1a73e8;
+      user-select: none;
+      cursor: default;
+    }
+
+    nav a {
+      color: #5f6368;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 24px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1a73e8;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 64px auto;
+      padding: 0 24px;
+    }
+
+    main h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin-bottom: 48px;
+      color: #202124;
+      text-align: center;
+    }
+
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #f8f9fa;
+      border: 1px solid #e8eaed;
+      border-radius: 8px;
+      padding: 24px;
+      flex: 1 1 250px;
+      max-width: 280px;
+      box-shadow: 0 1px 3px rgba(60,64,67,.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(26,115,232,0.3);
+    }
+
+    .card h2 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: #1a73e8;
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #202124;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 32px;
+      width: 100%;
+      padding-left: 0;
+      color: #5f6368;
+    }
+
+    ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e8eaed;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    .btn-primary {
+      background-color: #1a73e8;
+      color: white;
+      padding: 12px 24px;
+      font-weight: 500;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgb(26 115 232 / 0.6);
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background-color: #155ab6;
+    }
+
+    footer {
+      background: #f8f9fa;
+      border-top: 1px solid #e8eaed;
+      text-align: center;
+      padding: 16px 32px;
+      font-size: 0.875rem;
+      color: #5f6368;
+      box-shadow: inset 0 1px 0 #dadce0;
+      margin-top: auto;
+    }
+
+    @media (max-width: 900px) {
+      .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Turbo Tech</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Membership Pricing</h1>
+    <div class="pricing-cards">
+      <div class="card">
+        <h2>Basic</h2>
+        <div class="price">$1<span style="font-size:1rem;color:#5f6368;">/month</span></div>
+        <ul>
+          <li>Access to basic tutorials</li>
+          <li>Community forum access</li>
+          <li>Email support</li>
+        </ul>
+        <a href="#" class="btn-primary">Get Basic</a>
+      </div>
+      <div class="card">
+        <h2>Pro</h2>
+        <div class="price">$7<span style="font-size:1rem;color:#5f6368;">/month</span></div>
+        <ul>
+          <li>All Basic features</li>
+          <li>Advanced tutorials & webinars</li>
+          <li>Priority email support</li>
+        </ul>
+        <a href="#" class="btn-primary">Get Pro</a>
+      </div>
+      <div class="card">
+        <h2>Nitro</h2>
+        <div class="price">$15<span style="font-size:1rem;color:#5f6368;">/month</span></div>
+        <ul>
+          <li>All Pro features</li>
+          <li>1-on-1 coaching sessions</li>
+          <li>Exclusive Nitro community</li>
+        </ul>
+        <a href="#" class="btn-primary">Get Nitro</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Turbo Tech. All rights reserved.
+  </footer>
+</body>
+</html>
